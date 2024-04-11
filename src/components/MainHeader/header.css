@@ -1,0 +1,116 @@
+.header {
+   background-color: var(--neutral-light);
+   height: 60px;
+   position: fixed;
+   display: block;
+   width: 100%;
+   z-index: 1000;
+}
+
+.header .header__container {
+   max-width: 1200px;
+   margin: 0 auto;
+   height: inherit;
+   display: flex;
+   align-items: center;
+   position: relative;
+}
+@media (max-width: 1200px) {
+   .header .header__container {
+      padding: 0 30px;
+   }
+}
+@media (max-width: 768px) {
+   .header .header__container {
+      justify-content: space-between;
+   }
+}
+
+.header .header__logo {
+}
+
+.header .header__img {
+}
+
+.header .header__nav {
+   height: inherit;
+   width: 100%;
+   position: relative;
+   background-color: var(--neutral-light);
+}
+@media (max-width: 768px) {
+   .header .header__nav {
+      position: fixed;
+      z-index: 100;
+      inset: 0;
+      height: 100%;
+      width: 100%;
+      transition: var(--transition-200ms);
+      background-color: rgb(0 0 0 / 38%);
+      opacity: 0;
+      pointer-events: none;
+   }
+
+   .header__nav.toggle {
+      opacity: 1;
+      pointer-events: all;
+   }
+}
+
+.header .header__listing {
+   display: flex;
+   height: inherit;
+   align-items: center;
+   justify-content: space-between;
+   max-width: 400px;
+   margin: auto;
+   background-color: var(--neutral-light);
+}
+@media (max-width: 768px) {
+   .header .header__listing {
+      max-width: none;
+      width: 400px;
+      margin: inherit;
+      transform: translateX(700px);
+      transition: var(--transition-cubic);
+   }
+
+   .header .header__listing.toggle {
+      transform: translateX(220px);
+   }
+}
+
+.header .header__burger {
+   display: none;
+}
+
+@media (max-width: 768px) {
+   .header .header__button {
+      display: none;
+   }
+
+   .header .header__burger {
+      display: flex;
+      align-items: center;
+      align-self: center;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      flex-direction: column;
+      gap: 6px;
+      height: 26px;
+      justify-content: center;
+      overflow: hidden;
+      padding: 0;
+      position: relative;
+      width: 26px;
+   }
+
+   .header .header__burger span {
+      background-color: red;
+      border-radius: 10px;
+      display: block;
+      height: 2px;
+      width: 100%;
+   }
+}
