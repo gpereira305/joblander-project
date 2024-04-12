@@ -1,6 +1,6 @@
 .header {
    background-color: var(--neutral-light);
-   height: 60px;
+   height: 80px;
    position: fixed;
    display: block;
    width: 100%;
@@ -9,12 +9,12 @@
 }
 
 .header.toggle {
-   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+   box-shadow: var(--box-shadow-100);
 }
 
 
 .header .header__container {
-   max-width: 1200px;
+   max-width: 1440px;
    margin: 0 auto;
    height: inherit;
    display: flex;
@@ -22,7 +22,7 @@
    position: relative;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1440px) {
    .header .header__container {
       padding: 0 30px;
    }
@@ -53,9 +53,9 @@
       right: -400px;
       bottom: 0;
       height: 100%;
-      transition: var(--transition-element);
+      transition: right var(--transition-element);
       width: 400px;
-      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      box-shadow: var(--box-shadow-100);
       background-color: var(--neutral-dark);
    }
 

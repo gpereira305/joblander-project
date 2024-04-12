@@ -1,3 +1,4 @@
+import Feature from "./components/FeatureArea/FeatureSection";
 import Footer from "./components/Footer/Footer";
 import HeroSlider from "./components/HeroSlider/Hero";
 import Header from "./components/MainHeader/Header";
@@ -8,6 +9,7 @@ function App() {
          <Header />
          <main>
             <HeroSlider />
+            <Feature />
          </main>
 
          <Footer />

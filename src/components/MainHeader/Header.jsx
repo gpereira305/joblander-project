@@ -23,13 +23,14 @@ const navLinks = [
 ];
 
 export default function Header() {
+   const [isToggle, setIsToggle] = useState(false);
    const [isActive, setIsActive] = useState(false);
 
    useEffect(() => {
       window.addEventListener("scroll", () => {
-         setIsActive(window.scrollY > 5);
+         setIsToggle(window.scrollY > 5);
       });
-   });
+   }, []);
 
    const handleClick = () => {
       document.body.style.overflowY =
@@ -37,7 +38,7 @@ export default function Header() {
       setIsActive(!isActive);
    };
 
-   const toggleHeader = isActive ? "header toggle" : "header";
+   const toggleHeader = isToggle ? "header toggle" : "header";
    const toggleNavbar = isActive ? "header__nav toggle" : "header__nav";
    const toggleOverlay = isActive
       ? "header__overlay toggle"
