@@ -1,0 +1,39 @@
+.partners {
+   margin-top: 80px;
+}
+
+@media (max-width: 1200px) {
+   .partners {
+      padding: 0 30px;
+   }
+}
+
+@media (max-width: 992px) {
+   .partners {
+      margin-top: 40px;
+   }
+}
+
+@media (max-width: 768px) {
+   .partners {
+      margin-top: 0px;
+   }
+}
+
+.partners .partners__title {
+   text-align: center;
+   max-width: 500px;
+   margin: auto;
+   margin-bottom: 30px;
+}
+
+.partners__banner {
+   width: 100%;
+   margin: auto;
+   max-width: 992px;
+}
+
+.partners__image {
+   width: inherit;
+   height: auto;
+}

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./header.css";
+import "./index.css";
 import Logo from "../../assets/icons/main-logo.svg";
 import Close from "../../assets/icons/close.svg";
 

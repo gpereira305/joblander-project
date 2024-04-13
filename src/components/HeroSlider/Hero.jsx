@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { sliderData } from "../../data";
-import "./hero-slider.css";
+import "./index.css";
 
 export default function Hero() {
    return (

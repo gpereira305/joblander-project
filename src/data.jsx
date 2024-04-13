@@ -70,94 +70,94 @@ export const featureData = [
    },
 ];
 
-import image1 from "./assets/images/category-1.jpg";
-import image2 from "./assets/images/category-2.jpg";
-import image3 from "./assets/images/category-3.jpg";
-import image4 from "./assets/images/category-4.jpg";
+// import image1 from "./assets/images/category-1.jpg";
+// import image2 from "./assets/images/category-2.jpg";
+// import image3 from "./assets/images/category-3.jpg";
+// import image4 from "./assets/images/category-4.jpg";
 
-export const menu = [
-   {
-      id: 1,
-      title: "buttermilk pancakes",
-      category: "Business",
-      img: image1,
-      desc: `I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock `,
-   },
-   {
-      id: 2,
-      title: "diner double",
-      category: "Financial",
-      img: image2,
-      desc: `vaporware iPhone mumblecore selvage`,
-   },
-   {
-      id: 3,
-      title: "godzilla milkshake",
-      category: "Consumer",
-      img: image1,
-      desc: `ombucha chillwave fanny pack 3 wolf moon `,
-   },
-   {
-      id: 4,
-      title: "country delight",
-      category: "Business",
-      img: image4,
-      desc: `Shabby chic keffiyeh neutra snackwave `,
-   },
-   {
-      id: 5,
-      title: "country delight",
-      category: "Financial",
-      img: image4,
-      desc: `Shabby chic keffiyeh neutra snackwave pork belly shoreditch. `,
-   },
-   {
-      id: 6,
-      title: "godzilla milkshake",
-      category: "Consumer",
-      img: image4,
-      desc: `ombucha chillwave fanny pack 3 wolf moon street art photo.`,
-   },
-   {
-      id: 7,
-      title: "country delight",
-      category: "Business",
-      img: image2,
-      desc: `Shabby chic keffiyeh neutra `,
-   },
-   {
-      id: 8,
-      title: "country delight",
-      category: "Financial",
-      img: image3,
-      desc: `Shabby chic keffiyeh neutra snackwave pork belly shoreditch`,
-   },
-   {
-      id: 9,
-      title: "godzilla milkshake",
-      category: "Consumer",
-      img: image2,
-      desc: `ombucha chillwave fanny pack 3 wolf moon street`,
-   },
-   {
-      id: 10,
-      title: "country delight",
-      category: "Business",
-      img: image3,
-      desc: `Shabby chic keffiyeh neutra snackwave `,
-   },
-   {
-      id: 11,
-      title: "country delight",
-      category: "Financial",
-      img: image1,
-      desc: `Shabby chic keffiyeh neutra snackwave pork belly shoreditch. `,
-   },
-   {
-      id: 12,
-      title: "godzilla milkshake",
-      category: "Consumer",
-      img: image3,
-      desc: `ombucha chillwave fanny`,
-   },
-];
+// export const menu = [
+//    {
+//       id: 1,
+//       title: "buttermilk pancakes",
+//       category: "Business",
+//       img: image1,
+//       desc: `I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock `,
+//    },
+//    {
+//       id: 2,
+//       title: "diner double",
+//       category: "Financial",
+//       img: image2,
+//       desc: `vaporware iPhone mumblecore selvage`,
+//    },
+//    {
+//       id: 3,
+//       title: "godzilla milkshake",
+//       category: "Consumer",
+//       img: image1,
+//       desc: `ombucha chillwave fanny pack 3 wolf moon `,
+//    },
+//    {
+//       id: 4,
+//       title: "country delight",
+//       category: "Business",
+//       img: image4,
+//       desc: `Shabby chic keffiyeh neutra snackwave `,
+//    },
+//    {
+//       id: 5,
+//       title: "country delight",
+//       category: "Financial",
+//       img: image4,
+//       desc: `Shabby chic keffiyeh neutra snackwave pork belly shoreditch. `,
+//    },
+//    {
+//       id: 6,
+//       title: "godzilla milkshake",
+//       category: "Consumer",
+//       img: image4,
+//       desc: `ombucha chillwave fanny pack 3 wolf moon street art photo.`,
+//    },
+//    {
+//       id: 7,
+//       title: "country delight",
+//       category: "Business",
+//       img: image2,
+//       desc: `Shabby chic keffiyeh neutra `,
+//    },
+//    {
+//       id: 8,
+//       title: "country delight",
+//       category: "Financial",
+//       img: image3,
+//       desc: `Shabby chic keffiyeh neutra snackwave pork belly shoreditch`,
+//    },
+//    {
+//       id: 9,
+//       title: "godzilla milkshake",
+//       category: "Consumer",
+//       img: image2,
+//       desc: `ombucha chillwave fanny pack 3 wolf moon street`,
+//    },
+//    {
+//       id: 10,
+//       title: "country delight",
+//       category: "Business",
+//       img: image3,
+//       desc: `Shabby chic keffiyeh neutra snackwave `,
+//    },
+//    {
+//       id: 11,
+//       title: "country delight",
+//       category: "Financial",
+//       img: image1,
+//       desc: `Shabby chic keffiyeh neutra snackwave pork belly shoreditch. `,
+//    },
+//    {
+//       id: 12,
+//       title: "godzilla milkshake",
+//       category: "Consumer",
+//       img: image3,
+//       desc: `ombucha chillwave fanny`,
+//    },
+// ];

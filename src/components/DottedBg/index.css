@@ -1,0 +1,12 @@
+.dotted-bg {
+   display: flex;
+   width: fit-content;
+   position: absolute;
+}
+
+
+.dotted-bg .dotted-bg__image {
+   width: inherit;
+   height: inherit;
+   object-fit: cover;
+}
