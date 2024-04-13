@@ -1,15 +1,17 @@
 import React from "react";
-import Cards from "./Cards";
+import FeatureCard from "./FeatureCard";
 import DottedBackground from "../DottedBg/DottedBackground";
 import "./index.css";
-import Partners from "../Partners/Partners";
 
-export default function FeatureSection() {
+export default function FeatureSection({ featureData }) {
    return (
       <div className="feature">
          <DottedBackground />
-         <Cards />
-         <Partners />
+         <ul className="feature__list">
+            {featureData?.map((feature) => (
+               <FeatureCard key={feature.id} {...feature} />
+            ))}
+         </ul>
       </div>
    );
 }

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./index.css";
 import Logo from "../../assets/icons/main-logo.svg";
 import Close from "../../assets/icons/close.svg";
@@ -22,16 +22,7 @@ const navLinks = [
    },
 ];
 
-export default function Header() {
-   const [isToggle, setIsToggle] = useState(false);
-   const [isActive, setIsActive] = useState(false);
-
-   useEffect(() => {
-      window.addEventListener("scroll", () => {
-         setIsToggle(window.scrollY > 5);
-      });
-   }, []);
-
+export default function Header({ isActive, setIsActive, isToggle }) {
    const handleClick = () => {
       document.body.style.overflowY =
          document.body.style.overflowY == "hidden" ? "auto" : "hidden";
