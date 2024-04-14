@@ -1,9 +1,12 @@
 import React from "react";
 import FeatureCard from "./FeatureCard";
 import DottedBackground from "../DottedBg/DottedBackground";
+import { useGlobalContext } from "../../context";
 import "./index.css";
 
-export default function FeatureSection({ featureData }) {
+export default function FeatureSection() {
+   const { featureData } = useGlobalContext();
+
    return (
       <div className="feature">
          <DottedBackground />

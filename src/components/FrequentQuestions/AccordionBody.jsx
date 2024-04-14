@@ -1,31 +1,39 @@
 import React, { useRef } from "react";
 
-export default function AccordionBody({ handleToggle, active, faq }) {
+export default function AccordionBody({
+   handleToggle,
+   active,
+   question,
+   id,
+   answer,
+}) {
    const contentEl = useRef();
-   const { header, id, text } = faq;
 
-   const togglerStyle = active === id ? "active" : "";
+   const togglerActive = active === id ? "active" : "";
+   const accordionContentActive = `accordion__content ${
+      active === id ? "active" : ""
+   }`;
+   const accordionContentStyle =
+      active === id
+         ? { height: contentEl?.current?.scrollHeight }
+         : { height: "0px" };
 
    return (
       <li className="accordion__item">
          <button
-            className={`accordion__button ${togglerStyle}`}
+            className={`accordion__button ${togglerActive}`}
             onClick={() => handleToggle(id)}
             type="button"
          >
-            {header}
+            <span> {question}</span>
          </button>
 
          <div
             ref={contentEl}
-            className={`accordion__content ${active === id ? "show" : ""}`}
-            style={
-               active === id
-                  ? { height: contentEl?.current?.scrollHeight }
-                  : { height: "0px" }
-            }
+            className={accordionContentActive}
+            style={accordionContentStyle}
          >
-            <p className="accordion__text">{text}</p>
+            <p className="accordion__text">{answer}</p>
          </div>
       </li>
    );

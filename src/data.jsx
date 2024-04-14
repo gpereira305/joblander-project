@@ -70,117 +70,36 @@ export const featureData = [
    },
 ];
 
-// import image1 from "./assets/images/category-1.jpg";
-// import image2 from "./assets/images/category-2.jpg";
-// import image3 from "./assets/images/category-3.jpg";
-// import image4 from "./assets/images/category-4.jpg";
-
-// export const menu = [
-//    {
-//       id: 1,
-//       title: "buttermilk pancakes",
-//       category: "Business",
-//       img: image1,
-//       desc: `I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock `,
-//    },
-//    {
-//       id: 2,
-//       title: "diner double",
-//       category: "Financial",
-//       img: image2,
-//       desc: `vaporware iPhone mumblecore selvage`,
-//    },
-//    {
-//       id: 3,
-//       title: "godzilla milkshake",
-//       category: "Consumer",
-//       img: image1,
-//       desc: `ombucha chillwave fanny pack 3 wolf moon `,
-//    },
-//    {
-//       id: 4,
-//       title: "country delight",
-//       category: "Business",
-//       img: image4,
-//       desc: `Shabby chic keffiyeh neutra snackwave `,
-//    },
-//    {
-//       id: 5,
-//       title: "country delight",
-//       category: "Financial",
-//       img: image4,
-//       desc: `Shabby chic keffiyeh neutra snackwave pork belly shoreditch. `,
-//    },
-//    {
-//       id: 6,
-//       title: "godzilla milkshake",
-//       category: "Consumer",
-//       img: image4,
-//       desc: `ombucha chillwave fanny pack 3 wolf moon street art photo.`,
-//    },
-//    {
-//       id: 7,
-//       title: "country delight",
-//       category: "Business",
-//       img: image2,
-//       desc: `Shabby chic keffiyeh neutra `,
-//    },
-//    {
-//       id: 8,
-//       title: "country delight",
-//       category: "Financial",
-//       img: image3,
-//       desc: `Shabby chic keffiyeh neutra snackwave pork belly shoreditch`,
-//    },
-//    {
-//       id: 9,
-//       title: "godzilla milkshake",
-//       category: "Consumer",
-//       img: image2,
-//       desc: `ombucha chillwave fanny pack 3 wolf moon street`,
-//    },
-//    {
-//       id: 10,
-//       title: "country delight",
-//       category: "Business",
-//       img: image3,
-//       desc: `Shabby chic keffiyeh neutra snackwave `,
-//    },
-//    {
-//       id: 11,
-//       title: "country delight",
-//       category: "Financial",
-//       img: image1,
-//       desc: `Shabby chic keffiyeh neutra snackwave pork belly shoreditch. `,
-//    },
-//    {
-//       id: 12,
-//       title: "godzilla milkshake",
-//       category: "Consumer",
-//       img: image3,
-//       desc: `ombucha chillwave fanny`,
-//    },
-// ];
-
 export const faqData = [
    {
-      question: "How many programmers does it take to screw a lightbulb?",
+      question: "Como cadastrar em nossa plataforma?",
       answer:
-         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra lorem eu dolor rhoncus, at scelerisque ligula gravida. Sed porta id mi sit amet convallis. Etiam iaculis massa sit amet lacus blandit sodales. Nulla ultrices velit a diam placerat congue. Pellentesque iaculis, ipsum quis eleifend dapibus, est dui eleifend ante, quis fermentum mi ligula quis nisl. Ut et ex dui. Integer id venenatis quam.",
-      open: true,
+         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et cursus diam, nec gravida risus. Vivamus feugiat sit amet est vel imperdiet. Praesent vestibulum ornare tincidunt. Quisque pulvinar dui vitae justo eleifend, id placerat dui cursus.",
       id: 1,
    },
    {
-      question: "Who is the most awesome person?",
-      answer: "You! The viewer!",
-      open: false,
+      question: "O que oferecemos de benefícios para assinantes premiums?",
+      answer:
+         "Nam cursus nisi scelerisque ligula viverra dignissim. Duis mollis sem eu ipsum porttitor dignissim. Cras tempus nunc fermentum, dictum justo sed, porttitor lorem. Integer eget varius neque, vitae suscipit lorem.",
       id: 2,
    },
    {
       question:
-         "How many questions does it take to makes a succesful FAQ Page?",
-      answer: "This many!",
-      open: false,
+         "Como ter o seu currículo avaliado por um especialista em recrutamento?",
+      answer:
+         " Donec ultrices, dolor eget lacinia pharetra, lectus arcu pretium neque, quis vestibulum felis massa a ex. Mauris consequat, ligula placerat accumsan tincidunt, nisi ligula sagittis mi, eget pretium quam purus quis felis.",
       id: 3,
+   },
+   {
+      question: "Como cancelar a minha inscrição?",
+      answer:
+         "Donec ante nunc, sodales et nunc ut, commodo malesuada nisi. Mauris vitae diam dapibus, tristique nibh a, lacinia diam. Nam et magna scelerisque, venenatis leo a, blandit augue. Vestibulum in porta orci.",
+      id: 4,
+   },
+   {
+      question: "Quais as formas de pagamentos disponíveis?",
+      answer:
+         "Morbi blandit, mauris nec facilisis scelerisque, purus lorem ullamcorper urna, sit amet bibendum sem enim ac tortor.",
+      id: 5,
    },
 ];

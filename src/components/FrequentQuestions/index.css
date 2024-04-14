@@ -1,6 +1,6 @@
 .info {
    margin-top: 100px;
-   padding: 0 calc((100% - 1440px) / 2) 0 calc((100% - 1440px) / 2);
+   padding: 0 calc((100% - 992px) / 2) 0 calc((100% - 992px) / 2);
 }
 
 @media (max-width: 992px) {
@@ -9,22 +9,22 @@
    }
 }
 
-.info__title {
+.info .info__title {
    text-align: center;
    max-width: 748px;
    margin: auto;
    margin-bottom: 60px;
 }
 
-.info__container {
+.info .info__container {
    display: flex;
-   align-items: center;
-   gap: 40px;
+   justify-content: space-between;
+   gap: 15px;
    position: relative;
 }
 
-@media (max-width: 1440px) {
-   .info__container {
+@media (max-width: 992px) {
+   .info .info__container {
       flex-flow: column;
       gap: 100px;
       max-width: 768px;
@@ -32,6 +32,13 @@
    }
 }
 
+.info .info__wrapper {
+   display: block;
+   z-index: 100;
+   max-width: 650px;
+   margin: auto;
+   width: -webkit-fill-available;
+}
 
 .info__container>.dotted-bg {
    right: 20%;
@@ -39,19 +46,18 @@
    transform: rotate(67deg) scale(1.3);
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 992px) {
    .info__container>.dotted-bg {
-      top: 32%;
-      right: 7%;
-      transform: rotate(-156deg)
+      top: 40%;
+      right: 35%;
    }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
    .info__container>.dotted-bg {
-      top: 24%;
-      right: 8%;
-      transform: rotate(92deg) scale(0.8);
+      top: 38%;
+      right: 20%;
+      transform: rotate(80deg) scale(1.2);
    }
 }
 
@@ -60,13 +66,13 @@
 *         ACCORDION
 * ----------------------------------
 */
-.info__accordion {
+.info .info__accordion {
    width: 100%;
    z-index: 100;
    height: fit-content;
 }
 
-.accordion__item {
+.info .accordion__item {
    border: 1px solid var(--light-dark-300);
    border-radius: var(--radius10);
    margin-bottom: 10px;
@@ -77,31 +83,42 @@
    margin-bottom: 0;
 }
 
-.accordion__button {
+.info .accordion__button {
    display: flex;
    align-items: flex-start;
    justify-content: space-between;
    cursor: pointer;
    background-color: var(--neutral-light);
    border: none;
-   font: normal 500 16px/18px var(--primary-font);
    width: 100%;
    padding: 20px;
    position: relative;
-   color: var(--neutral-dark);
    transition: all var(--transition-200ms);
+
+}
+
+.info .accordion__button>span {
+   font: normal 500 16px/18px var(--primary-font);
+   color: var(--neutral-dark);
+   text-align: left;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   width: calc(100% - 30px);
+}
+
+@media (max-width: 576px) {
+   .accordion__button>span {
+      font-size: 14px;
+      line-height: normal;
+   }
 }
 
 .accordion__button.active {
    background-color: var(--primary);
 }
 
-.accordion__button.active .rc-accordion-icon {
-   transform: rotate(180deg);
-   color: #fff;
-}
-
-.accordion__button::after {
+.info .accordion__button::after {
    display: flex;
    align-items: center;
    justify-content: center;
@@ -119,17 +136,17 @@
    line-height: 15px;
 }
 
-
 .accordion__button.active::after {
    content: "-";
    border: 1px solid var(--light-dark-100);
+   color: var(--neutral-light);
 }
 
-.accordion__button.active {
-   color: #fff;
+.accordion__button.active>span {
+   color: var(--neutral-light);
 }
 
-.accordion__content {
+.info .accordion__content {
    position: relative;
    height: 0;
    overflow: hidden;
@@ -137,15 +154,15 @@
    background-color: var(--neutral-light);
 }
 
-.accordion__content.show {
+.accordion__content.active {
    height: auto;
 }
 
-.accordion__content.show .accordion__text {
+.accordion__content.active .accordion__text {
    opacity: 1;
 }
 
-.accordion__text {
+.info .accordion__text {
    padding: 20px;
    font: normal 400 14px/20px var(--secondary-font);
    color: var(--light-dark-200);
@@ -153,29 +170,26 @@
    transition: opacity var(--transition-500ms);
 }
 
-
-
-
-
 /*
 * ----------------------------------
 *        BANNER
 * ----------------------------------
 */
-.info__banner {
+.info .info__banner {
    width: 100%;
    z-index: 100;
    overflow: hidden;
-   max-width: 500px;
+   max-width: 450px;
 }
 
-.info__image {
+.info .info__image {
    width: inherit;
    height: auto;
 }
 
-@media (max-width: 1440px) {
-   .info__banner {
+@media (max-width: 992px) {
+   .info .info__banner {
       max-width: 350px;
+      margin: auto;
    }
 }

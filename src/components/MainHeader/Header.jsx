@@ -1,7 +1,8 @@
 import React from "react";
-import "./index.css";
 import Logo from "../../assets/icons/main-logo.svg";
 import Close from "../../assets/icons/close.svg";
+import { useGlobalContext } from "../../context";
+import "./index.css";
 
 const navLinks = [
    {
@@ -22,7 +23,9 @@ const navLinks = [
    },
 ];
 
-export default function Header({ isActive, setIsActive, isToggle }) {
+export default function Header() {
+   const { isActive, setIsActive, isToggle } = useGlobalContext();
+
    const handleClick = () => {
       document.body.style.overflowY =
          document.body.style.overflowY == "hidden" ? "auto" : "hidden";
