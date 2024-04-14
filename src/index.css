@@ -147,3 +147,16 @@ select {
    font: normal 700 42px/50px var(--secondary-font);
    color: var(--secondary);
 }
+
+@media (max-width: 768px) {
+   .main-title {
+      font-size: 32px;
+      line-height: normal;
+   }
+}
+
+@media (max-width: 576px) {
+   .main-title {
+      font-size: 28px;
+   }
+}

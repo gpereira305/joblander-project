@@ -103,3 +103,164 @@ export const faqData = [
       id: 5,
    },
 ];
+
+import user1 from "./assets/images/user-1.jpg";
+import user2 from "./assets/images/user-2.jpg";
+import user3 from "./assets/images/user-3.jpg";
+import user4 from "./assets/images/user-4.jpg";
+import user5 from "./assets/images/user-5.jpg";
+import user6 from "./assets/images/user-6.jpg";
+
+export const userComments = [
+   {
+      comment:
+         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et cursus diam, nec gravida risus.",
+      name: "Megan Smith",
+      profession: "Web developer",
+      image: user1,
+      id: 1,
+   },
+   {
+      comment:
+         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et cursus diam, nec gravida risus.",
+      name: "John Phillips",
+      profession: "Backend Designer",
+      image: user2,
+      id: 2,
+   },
+   {
+      comment:
+         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et cursus diam, nec gravida risus.",
+      name: "Lucia Torres",
+      profession: "UI/UX Designer",
+      image: user3,
+      id: 3,
+   },
+   {
+      comment:
+         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et cursus diam, nec gravida risus.",
+      name: "Pablo Rodriguez",
+      profession: "Frontend Developer",
+      image: user4,
+      id: 4,
+   },
+   {
+      comment:
+         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et cursus diam, nec gravida risus.",
+      name: "Fabricio Santos",
+      profession: "Product Owner",
+      image: user5,
+      id: 5,
+   },
+   {
+      comment:
+         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et cursus diam, nec gravida risus.",
+      name: "Fernanda Gomes",
+      profession: "Fullstack Developer",
+      image: user6,
+      id: 6,
+   },
+];
+
+export const footerLinks = [
+   {
+      title: "Home",
+      links: [
+         {
+            subtitle: "Produto",
+            link: "#",
+            id: 1,
+         },
+         {
+            subtitle: "Preços",
+            link: "#",
+            id: 2,
+         },
+         {
+            subtitle: "Empresa",
+            link: "#",
+            id: 3,
+         },
+      ],
+      id: 1,
+   },
+   {
+      title: "Sobre",
+      links: [
+         {
+            subtitle: "Companhia",
+            link: "#",
+            id: 1,
+         },
+         {
+            subtitle: "Liderança",
+            link: "#",
+            id: 2,
+         },
+         {
+            subtitle: "Carreiras",
+            link: "#",
+            id: 3,
+         },
+         {
+            subtitle: "Diversidade",
+            link: "#",
+            id: 4,
+         },
+      ],
+      id: 2,
+   },
+   {
+      title: "Contato",
+      links: [
+         {
+            subtitle: "Forum",
+            link: "#",
+            id: 1,
+         },
+         {
+            subtitle: "Suporte",
+            link: "#",
+            id: 2,
+         },
+         {
+            subtitle: "(99)9-9999-9999",
+            link: "#",
+            id: 3,
+         },
+      ],
+      id: 3,
+   },
+];
+
+import icon1 from "./assets/icons/facebook.svg";
+import icon2 from "./assets/icons/twitter.svg";
+import icon3 from "./assets/icons/youtube.svg";
+import icon4 from "./assets/icons/linkedin.svg";
+
+export const socialLinks = [
+   {
+      icon: icon1,
+      link: "http://www.facebook.com",
+      name: "Facebook",
+      id: 1,
+   },
+   {
+      icon: icon2,
+      link: "http://www.twitter.com",
+      name: "Twitter",
+      id: 2,
+   },
+   {
+      icon: icon3,
+      link: "http://www.youtube.com",
+      name: "Youtube",
+      id: 3,
+   },
+   {
+      icon: icon4,
+      link: "http://www.linkedin.com",
+      name: "Linkedin",
+      id: 4,
+   },
+];

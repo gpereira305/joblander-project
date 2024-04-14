@@ -5,6 +5,7 @@ import Footer from "./components/Footer/Footer";
 import HeroSlider from "./components/HeroSlider/Hero";
 import Header from "./components/MainHeader/Header";
 import Partners from "./components/Partners/Partners";
+import CommentsSlider from "./components/Comments/CommentsSlider";
 
 function App() {
    return (
@@ -15,6 +16,7 @@ function App() {
             <FeatureSection />
             <Partners />
             <FrequentQuestions />
+            <CommentsSlider />
          </main>
 
          <Footer />
