@@ -139,15 +139,15 @@ export const userComments = [
       comment:
          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et cursus diam, nec gravida risus.",
       name: "Megan Smith",
-      profession: "Web developer",
+      profession: "Frontend developer",
       image: user1,
       id: 1,
    },
    {
       comment:
          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et cursus diam, nec gravida risus.",
-      name: "John Phillips",
-      profession: "Backend Designer",
+      name: "Joanne Phillips",
+      profession: "Backend Developer",
       image: user2,
       id: 2,
    },
@@ -163,7 +163,7 @@ export const userComments = [
       comment:
          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et cursus diam, nec gravida risus.",
       name: "Pablo Rodriguez",
-      profession: "Frontend Developer",
+      profession: "Fullstack Developer",
       image: user4,
       id: 4,
    },
@@ -178,8 +178,8 @@ export const userComments = [
    {
       comment:
          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et cursus diam, nec gravida risus.",
-      name: "Fernanda Gomes",
-      profession: "Fullstack Developer",
+      name: "Fernando Gomes",
+      profession: "Tech Lead",
       image: user6,
       id: 6,
    },

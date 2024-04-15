@@ -35,7 +35,7 @@ export default function App() {
                   style={{ backgroundImage: `url(${formBg})` }}
                >
                   <h2 className="signupform__title main-title">
-                     Crie sua conta
+                     Faça sua inscrição
                   </h2>
 
                   <Form className="signupform__body">
