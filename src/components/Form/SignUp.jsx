@@ -1,152 +1,141 @@
-import { useFormik } from "formik";
-import { basicSchema } from "../../schema";
-const onSubmit = async (values, actions) => {
-   console.log(values);
-   console.log(actions);
-   await new Promise((resolve) => setTimeout(resolve, 1000));
-   actions.resetForm();
+import React from "react";
+import "./index.css";
+import {
+   Formik,
+   Form,
+   Field,
+   ErrorMessage,
+   FieldArray,
+   FastField,
+} from "formik";
+import { initialValues, validationSchema } from "../../schema";
+
+const onSubmit = (values, submitProps) => {
+   console.log("Form data", values);
+   submitProps.setSubmitting(false);
+   submitProps.resetForm();
 };
-const SignUp = () => {
-   const {
-      values,
-      errors,
-      touched,
-      isSubmitting,
-      handleBlur,
-      handleChange,
-      handleSubmit,
-   } = useFormik({
-      initialValues: {
-         firstname: "",
-         lastname: "",
-         email: "",
-         age: "",
-         password: "",
-         confirmPassword: "",
-      },
-      validationSchema: basicSchema,
-      onSubmit,
-   });
-   console.log(errors);
+export default function App() {
+   const planOptions = [
+      { key: "Selecione um plano", value: "" },
+      { key: "Grátis", value: "Grátis" },
+      { key: "Prata", value: "Prata" },
+      { key: "Ouro", value: "Ouro" },
+      { key: "Diamante", value: "Diamante" },
+   ];
    return (
-      <div className="form">
-         <form onSubmit={handleSubmit} autoComplete="off">
-            <div style={{ display: "flex", gap: "30px" }}>
-               <label htmlFor="firstname">
-                  First Name
-                  <input
-                     value={values.firstname}
-                     onChange={handleChange}
-                     id="firstname"
-                     type="firstname"
-                     placeholder="Enter First Name"
-                     onBlur={handleBlur}
-                     className={
-                        errors.firstname && touched.firstname
-                           ? "input-error"
-                           : ""
-                     }
-                  />
-                  {errors.firstname && touched.firstname && (
-                     <p className="error">{errors.firstname}</p>
-                  )}
-               </label>
+      <Formik
+         initialValues={initialValues}
+         validationSchema={validationSchema}
+         onSubmit={onSubmit}
+      >
+         {(formik) => {
+            return (
+               <div className="form">
+                  <Form>
+                     <div className="form-control">
+                        <label htmlFor="firstName">
+                           Nome
+                           <Field type="text" id="firstName" name="firstName" />
+                           <ErrorMessage name="firstName">
+                              {(error) => <div className="error">{error}</div>}
+                           </ErrorMessage>
+                        </label>
 
-               <label htmlFor="lastname">
-                  Last Name
-                  <input
-                     value={values.lastname}
-                     onChange={handleChange}
-                     id="lastname"
-                     type="lastname"
-                     placeholder="Enter Last Name"
-                     onBlur={handleBlur}
-                     // className={errors.email && touched.email ? "input-error" : ""}
-                  />
-                  {errors.lastname && touched.lastname && (
-                     <p className="error">{errors.lastname}</p>
-                  )}
-               </label>
-            </div>
+                        <label htmlFor="lastName">
+                           Sobrenome
+                           <Field type="text" id="lastName" name="lastName" />
+                           <ErrorMessage name="lastName">
+                              {(error) => <div className="error">{error}</div>}
+                           </ErrorMessage>
+                        </label>
+                     </div>
 
-            <div style={{ display: "flex", gap: "30px" }}>
-               <label htmlFor="email">
-                  Email
-                  <input
-                     value={values.email}
-                     onChange={handleChange}
-                     id="email"
-                     type="email"
-                     placeholder="Enter your email"
-                     onBlur={handleBlur}
-                     className={
-                        errors.email && touched.email ? "input-error" : ""
-                     }
-                  />
-                  {errors.email && touched.email && (
-                     <p className="error">{errors.email}</p>
-                  )}
-               </label>
-               <label htmlFor="age">
-                  Age
-                  <input
-                     id="age"
-                     type="number"
-                     placeholder="Enter your age"
-                     value={values.age}
-                     onChange={handleChange}
-                     onBlur={handleBlur}
-                     className={errors.age && touched.age ? "input-error" : ""}
-                  />
-                  {errors.age && touched.age && (
-                     <p className="error">{errors.age}</p>
-                  )}
-               </label>
-            </div>
+                     <div className="form-control">
+                        <label htmlFor="email">
+                           Email
+                           <Field type="email" id="email" name="email" />
+                           <ErrorMessage name="email">
+                              {(error) => <div className="error">{error}</div>}
+                           </ErrorMessage>
+                        </label>
 
-            <div style={{ display: "flex", gap: "30px" }}>
-               <label htmlFor="password">
-                  Password
-                  <input
-                     id="password"
-                     type="password"
-                     placeholder="Enter your password"
-                     value={values.password}
-                     onChange={handleChange}
-                     onBlur={handleBlur}
-                     className={
-                        errors.password && touched.password ? "input-error" : ""
-                     }
-                  />
-                  {errors.password && touched.password && (
-                     <p className="error">{errors.password}</p>
-                  )}
-               </label>
-               <label htmlFor="confirmPassword">
-                  Confirm Password
-                  <input
-                     id="confirmPassword"
-                     type="password"
-                     placeholder="Confirm password"
-                     value={values.confirmPassword}
-                     onChange={handleChange}
-                     onBlur={handleBlur}
-                     className={
-                        errors.confirmPassword && touched.confirmPassword
-                           ? "input-error"
-                           : ""
-                     }
-                  />
-                  {errors.confirmPassword && touched.confirmPassword && (
-                     <p className="error">{errors.confirmPassword}</p>
-                  )}
-               </label>
-            </div>
-            <button disabled={isSubmitting} type="submit">
-               Submit
-            </button>
-         </form>
-      </div>
+                        <label htmlFor="phone">
+                           Telefone
+                           <Field type="text" id="phone" name="phone" />
+                           <ErrorMessage name="phone">
+                              {(error) => <div className="error">{error}</div>}
+                           </ErrorMessage>
+                        </label>
+                     </div>
+
+                     <div className="form-control">
+                        <label htmlFor="state">
+                           Estado
+                           <Field type="text" id="state" name="state" />
+                           <ErrorMessage name="state">
+                              {(error) => <div className="error">{error}</div>}
+                           </ErrorMessage>
+                        </label>
+                        <label htmlFor="city">
+                           Cidade
+                           <Field type="text" id="city" name="city" />
+                           <ErrorMessage name="city">
+                              {(error) => <div className="error">{error}</div>}
+                           </ErrorMessage>
+                        </label>
+                     </div>
+
+                     <div className="form-control">
+                        <label htmlFor="age">
+                           Idade
+                           <Field type="text" id="age" name="age" />
+                           <ErrorMessage name="age">
+                              {(error) => <div className="error">{error}</div>}
+                           </ErrorMessage>
+                        </label>
+                        <label htmlFor="role">
+                           Cargo desejado
+                           <Field type="text" id="role" name="role" />
+                           <ErrorMessage name="role">
+                              {(error) => <div className="error">{error}</div>}
+                           </ErrorMessage>
+                        </label>
+                     </div>
+
+                     <div className="form-control">
+                        <label htmlFor="salary">
+                           Pretensão salarial
+                           <Field type="text" id="salary" name="salary" />
+                           <ErrorMessage name="salary">
+                              {(error) => <div className="error">{error}</div>}
+                           </ErrorMessage>
+                        </label>
+
+                        <label htmlFor="plan">
+                           Plano
+                           <Field name="plan" as="select">
+                              {planOptions.map(({ key, value }) => (
+                                 <option key={key} value={value}>
+                                    {key}
+                                 </option>
+                              ))}
+                           </Field>
+                           <ErrorMessage name="plan">
+                              {(error) => <div className="error">{error}</div>}
+                           </ErrorMessage>
+                        </label>
+                     </div>
+                     <button
+                        type="submit"
+                        disabled={!formik.isValid || formik.isSubmitting}
+                     >
+                        Submit
+                     </button>
+                  </Form>
+               </div>
+            );
+         }}
+      </Formik>
    );
-};
-export default SignUp;
+}

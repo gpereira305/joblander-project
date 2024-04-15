@@ -9,7 +9,6 @@ import CommentsSlider from "./components/Comments/CommentsSlider";
 import Plans from "./components/Plans/Plans";
 import SignUp from "./components/Form/SignUp";
 import GoTop from "./components/GoTop/GoTop";
-// import SignIn from "./components/Form/SignIn";
 
 function App() {
    return (
@@ -23,7 +22,6 @@ function App() {
             <CommentsSlider />
             <Plans />
             <SignUp />
-            {/* <SignIn /> */}
             <GoTop />
          </main>
 

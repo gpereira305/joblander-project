@@ -1,37 +1,76 @@
-import * as yup from "yup";
-const passwordRules = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}$/;
-// min 5 characters, 1 upper case letter, 1 lower case letter, 1 numeric digit.
-export const basicSchema = yup.object().shape({
-   firstname: yup
-      .string()
-      .max(15, "Must be 15 characters or less")
-      .required("Required"),
-   lastname: yup
-      .string()
-      .max(20, "Must be 20 characters or less")
-      .required("Required"),
-   email: yup.string().email("Please enter a valid email").required("Required"),
-   age: yup.number().positive().integer().required("Required"),
-   password: yup
-      .string()
-      .min(5)
-      .matches(passwordRules, { message: "Please create a stronger password" })
-      .required("Required"),
-   confirmPassword: yup
-      .string()
-      .oneOf([yup.ref("password"), null], "Passwords must match")
-      .required("Required"),
+import * as Yup from "yup";
+
+const errorMessage = "é obrigatório!";
+const invalidMessage = "está inválido!";
+const minimumCharMessage = "deve ter pelo menos 3 dígitos!";
+
+const initialValues = {
+   firstName: "",
+   lastName: "",
+   plan: "",
+   email: "",
+   phone: "",
+   age: "",
+   state: "",
+   city: "",
+   role: "",
+   salary: "",
+};
+
+const validationSchema = Yup.object({
+   firstName: Yup.string()
+      .min(3, `Nome ${minimumCharMessage}`)
+      .matches(/^[a-zA-Z\s]*$/, `Nome ${invalidMessage}`)
+      .required(`Nome ${errorMessage}`),
+
+   lastName: Yup.string()
+      .min(3, `Sobrenome ${minimumCharMessage}`)
+      .matches(/^[a-zA-Z\s]*$/, `Sobrenome ${invalidMessage}`)
+      .required(`Sobrenome ${errorMessage}`),
+
+   email: Yup.string()
+      .email(`Email ${invalidMessage}`)
+      .required(`Email ${errorMessage}`),
+
+   phone: Yup.string()
+      .matches(
+         /^(\+\d{1,2}\s?)?1?\-?\.?\s?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{5}$/,
+         `Telefone ${invalidMessage}`,
+      )
+      .required(`Telefone ${errorMessage}`),
+
+   age: Yup.string()
+      .min(2, "Idade mínima de pelo menos 2 dígitos!")
+      .matches(
+         /(?=.*?\d)^\$?(([1-9]\d{0,2}(,\d{3})*)|\d+)?(\.\d{1,2})?$/,
+         `Idade ${invalidMessage}`,
+      )
+      .required(`Idade ${errorMessage}`),
+
+   state: Yup.string()
+      .min(2, `Estado deve ter pelo menos 2 dígitos!`)
+      .matches(/^[a-zA-Z\s]*$/, `Estado ${invalidMessage}`)
+      .required(`Estado ${errorMessage}`),
+   city: Yup.string()
+      .min(3, `Cidade ${minimumCharMessage}`)
+      .matches(/^[a-zA-Z\s]*$/, `Cidade ${invalidMessage}`)
+      .required(`Cidade ${errorMessage}`),
+
+   plan: Yup.string().required(`Plano ${errorMessage}`),
+
+   role: Yup.string()
+      .min(5, `Vaga deve ter pelo menos 5 dígitos!`)
+      .matches(/^[a-zA-Z\s]*$/, `Vaga ${invalidMessage}`)
+      .required(`Vaga ${errorMessage}`),
+
+   salary: Yup.string()
+      .min(3, `Vaga ${minimumCharMessage}`)
+      .max(10, "Máximo de 10 dígitos!")
+      .matches(
+         /(?=.*?\d)^\$?(([1-9]\d{0,2}(,\d{3})*)|\d+)?(\.\d{1,2})?$/,
+         `Salário ${invalidMessage}`,
+      )
+      .required(`Pretenção salarial ${errorMessage}`),
 });
-export const advancedSchema = yup.object().shape({
-   username: yup
-      .string()
-      .min(3, "Username must be at least 3 characters long")
-      .required("Required"),
-   jobType: yup
-      .string()
-      .oneOf(["designer", "developer", "manager", "other"], "Invalid Job Type")
-      .required("Required"),
-   acceptedTos: yup
-      .boolean()
-      .oneOf([true], "Please accept the terms of service"),
-});
+
+export { initialValues, validationSchema };
