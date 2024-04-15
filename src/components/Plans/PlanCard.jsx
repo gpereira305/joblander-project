@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-scroll";
 export default function PlanCard({ title, price, features }) {
    return (
       <article className="plans__card">
@@ -13,9 +14,15 @@ export default function PlanCard({ title, price, features }) {
                </li>
             ))}
          </ul>
-         <button className="plans__card-button button__layout" type="button">
-            Contratar
-         </button>
+         <Link
+            className="plans__card-button button__layout"
+            smooth={true}
+            spy={true}
+            duration={200}
+            to={"register"}
+         >
+            Contate nos
+         </Link>
       </article>
    );
 }

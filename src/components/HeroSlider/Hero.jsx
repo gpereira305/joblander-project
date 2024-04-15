@@ -5,6 +5,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { sliderData } from "../../data";
+import { Link } from "react-scroll";
 import "./index.css";
 
 export default function Hero() {
@@ -27,11 +28,17 @@ export default function Hero() {
                <SwiperSlide key={id}>
                   <div className="hero__content" data-swiper-parallax="-800">
                      <h1 className="hero__title">{title}</h1>
-
                      <p className="hero__message">{message}</p>
-                     <button className="button__layout" type="button">
+
+                     <Link
+                        className="button__layout"
+                        smooth={true}
+                        spy={true}
+                        duration={200}
+                        to={"register"}
+                     >
                         Contate nos
-                     </button>
+                     </Link>
                   </div>
                   <figure className="hero__image">
                      <img

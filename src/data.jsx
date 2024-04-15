@@ -29,35 +29,35 @@ import banner5 from "./assets/images/banner-5.jpg";
 
 export const sliderData = [
    {
-      title: "Do I have to allow the use of cookies?",
+      title: "Análise de currículo por profissional experiente",
       message:
          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui ",
       banner: banner1,
       id: 1,
    },
    {
-      title: "How do I change my My Page password?",
+      title: "Acompanhamento personalizado",
       message:
          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui ",
       banner: banner2,
       id: 2,
    },
    {
-      title: "What is BankID?",
+      title: "Suporte personalizado e individual",
       message:
          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui ",
       banner: banner3,
       id: 3,
    },
    {
-      title: "Whose birth number can I use?",
+      title: "Entrevistas simuladas com recrutadores",
       message:
          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui ",
       banner: banner4,
       id: 4,
    },
    {
-      title: "When do I recieve a password ordered by letter?",
+      title: "Currículos e cartas de apresentação",
       message:
          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui ",
       banner: banner5,
@@ -72,21 +72,21 @@ import advices from "./assets/images/card-3.webp";
 export const featureData = [
    {
       icon: planning,
-      title: "Business Audit Services",
+      title: "Análise do perfil profissional",
       message:
          "Lorem ipsum dolor sit elit consectetur sed eiusmod tempor labore aliqua ed.enim minim veniam.",
       id: 1,
    },
    {
       icon: strategy,
-      title: "Best Financial Advice",
+      title: "Os recrutadores mais experientes do mercado",
       message:
          "Lorem ipsum dolor sit elit consectetur sed eiusmod tempor labore aliqua ed.enim minim veniam.",
       id: 2,
    },
    {
       icon: advices,
-      title: "Strategic Consulting Services",
+      title: "Projeção estratégica do cadidato",
       message:
          "Lorem ipsum dolor sit elit consectetur sed eiusmod tempor labore aliqua ed.enim minim veniam.",
       id: 3,
@@ -120,7 +120,7 @@ export const faqData = [
       id: 4,
    },
    {
-      question: "Quais as formas de pagamentos disponíveis?",
+      question: "Quais as formas de pagamento disponíveis?",
       answer:
          "Morbi blandit, mauris nec facilisis scelerisque, purus lorem ullamcorper urna, sit amet bibendum sem enim ac tortor.",
       id: 5,
