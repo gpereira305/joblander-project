@@ -57,7 +57,7 @@
    object-fit: cover;
 }
 
-.hero__content {
+.hero .hero__content {
    position: absolute;
    z-index: 1000;
    margin-right: auto;
@@ -69,13 +69,13 @@
 }
 
 @media (max-width: 1440px) {
-   .hero__content {
+   .hero .hero__content {
       padding: 0 20px;
    }
 }
 
 @media (max-width: 470px) {
-   .hero__content {
+   .hero .hero__content {
       top: 60px;
    }
 }

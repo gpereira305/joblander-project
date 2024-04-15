@@ -50,7 +50,7 @@
    text-transform: uppercase;
 }
 
-.plans__card-price {
+.plans .plans__card-price {
    text-align: start;
    padding: 20px;
    font: normal 500 20px/24px var(--primary-font);

@@ -24,7 +24,7 @@ function App() {
             <Plans />
             <SignUp />
             <GoTop />
-            <ToastContainer autoClose={1500} />
+            <ToastContainer autoClose={2000} />
          </main>
 
          <Footer />

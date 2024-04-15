@@ -1,6 +1,4 @@
 import React from "react";
-import check from "../../assets/icons/check.svg";
-
 export default function PlanCard({ title, price, features }) {
    return (
       <article className="plans__card">

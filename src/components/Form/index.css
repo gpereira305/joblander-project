@@ -15,14 +15,14 @@
    }
 }
 
-.signupform__title {
+.signupform .signupform__title {
    text-align: center;
    max-width: 576px;
    margin: auto;
    margin-bottom: 50px;
 }
 
-.signupform__body {
+.signupform .signupform__body {
    width: 100%;
    max-width: 768px;
    border-radius: var(--radius10);
@@ -31,26 +31,25 @@
    background-color: var(--neutral-light);
 }
 
-.signupform__wrapper {
+.signupform .signupform__wrapper {
    margin-bottom: 20px;
    display: flex;
    gap: 30px;
 }
 
 @media (max-width: 768px) {
-   .signupform__wrapper {
+   .signupform .signupform__wrapper {
       gap: 15px;
    }
 }
 
 @media (max-width: 576px) {
-   .signupform__wrapper {
+   .signupform .signupform__wrapper {
       flex-flow: column;
    }
 }
 
-
-.signupform__label {
+.signupform .signupform__label {
    font-weight: bold;
    display: flex;
    flex-flow: column;
@@ -69,120 +68,25 @@
    border: 1px solid var(--light-dark-300);
 }
 
-.signupform__input:focus {
+.signupform .signupform__input:focus {
    outline: none;
    border: 1px solid var(--light-dark-200);
 }
 
-.signupform__error {
+.signupform .signupform__error {
    display: block;
    font: normal 400 12px/14px var(--primary-font);
    color: var(--primary);
 }
 
-.signupform__submit {
+.signupform .signupform__submit {
    width: 100% !important;
    max-width: 338px;
    justify-content: center;
 }
 
 @media (max-width: 576px) {
-   .signupform__submit {
+   .signupform .signupform__submit {
       max-width: 100%;
    }
 }
-
-
-
-
-
-
-
-/*
-.error {
-   color: #fc8181;
-   font-size: 0.75rem;
-   text-align: left;
-   margin-top: 0.25rem;
-}
-
-nav {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   margin-bottom: 2rem;
-}
-
-nav h3 {
-   margin: 1rem;
-   cursor: pointer;
-   color: #718096;
-}
-
-nav h3:hover {
-   color: white;
-}
-
-form {
-   width: 100%;
-}
-
-form label {
-   font-size: 1rem;
-   font-weight: bold;
-   display: block;
-   text-align: left;
-   margin: 1rem 0 0.2rem;
-   width: 100%;
-}
-
-input,
-select {
-   width: 100%;
-   padding: 0.65rem 0.5rem;
-   font-size: 1rem;
-   color: white;
-   border: 2px solid #4a5568;
-   background-color: #2d3748;
-   border-radius: 10px;
-   outline: none;
-}
-
-input:focus,
-select:focus {
-   border-color: #4299e1;
-}
-
-input::placeholder,
-select::placeholder {
-   color: #a0aec0;
-}
-
-input[type="checkbox"] {
-   width: fit-content;
-   margin-right: 0.5rem;
-   transform: scale(1.25);
-}
-
-button {
-   display: block;
-   margin: 1rem 0;
-   padding: 0.35rem 0.5rem;
-   background-color: #4299e1;
-   color: #1a202c;
-   border: none;
-   border-radius: 3px;
-   width: 100%;
-   font-size: 1rem;
-   font-weight: bold;
-   cursor: pointer;
-}
-
-input.input-error,
-select.input-error {
-   border-color: #fc8181;
-}
-
-button:disabled {
-   opacity: 0.35;
-} */
