@@ -46,8 +46,23 @@ Para solicitar um plano, basta preencher o formulário com seus dados básicos e
 
 ## **Screenshots**
 - Desktop
-<img width="1366" alt="banner" src="https://github.com/gpereira305/joblander-project/assets/66249777/7370d7d7-955a-46be-8171-970416ac7f8f">
+  
+ <img width="1366" alt="banner" src="https://github.com/gpereira305/joblander-project/assets/66249777/7370d7d7-955a-46be-8171-970416ac7f8f">
  
+ <img width="1265" alt="comments" src="https://github.com/gpereira305/joblander-project/assets/66249777/42c2ce23-2f82-498f-b0e6-0052ef67c0b5">
+
+ <img width="1273" alt="FAQ" src="https://github.com/gpereira305/joblander-project/assets/66249777/2dbebf55-d6fd-451e-b169-26ddbb6f1e11">
+
+ <img width="1222" alt="plans" src="https://github.com/gpereira305/joblander-project/assets/66249777/68912efc-c899-467d-8349-b94b7c1a1b17">
+
+ <img width="1154" alt="form" src="https://github.com/gpereira305/joblander-project/assets/66249777/bb097ced-979f-4a8c-b0ad-f51d45d767b6">
+
+
 
 - Versão mobile
-<img src="./src/assets/screen-shots/mobile.png" />
+
+<img width="1216" alt="mobile-1" src="https://github.com/gpereira305/joblander-project/assets/66249777/14f8acf0-679e-45ef-a87d-7ac4e0ce25c9">
+
+<img width="1135" alt="mobile-2" src="https://github.com/gpereira305/joblander-project/assets/66249777/b98a5f0e-ebde-4e24-b3f5-550ce98a5756">
+
+
