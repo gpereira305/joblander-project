@@ -144,7 +144,7 @@ select {
 
 /* titles */
 .main-title {
-   font: normal 700 42px/50px var(--secondary-font);
+   font: normal 500 42px/50px var(--secondary-font);
    color: var(--secondary);
 }
 

@@ -81,7 +81,7 @@
 }
 
 .hero .hero__title {
-   font: normal 700 60px/72px var(--secondary-font);
+   font: normal 500 60px/72px var(--secondary-font);
    color: var(--neutral-light);
    text-align: start;
    max-width: 768px;

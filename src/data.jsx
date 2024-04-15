@@ -86,7 +86,7 @@ export const featureData = [
    },
    {
       icon: advices,
-      title: "Projeção estratégica do cadidato",
+      title: "Projeção estratégica do candidato",
       message:
          "Lorem ipsum dolor sit elit consectetur sed eiusmod tempor labore aliqua ed.enim minim veniam.",
       id: 3,

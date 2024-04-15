@@ -58,7 +58,7 @@ export default function Header() {
                      to={"register"}
                      onClick={handleClick}
                   >
-                     Contate nos
+                     Cadastre-se
                   </Link>
                </ul>
             </nav>
@@ -71,7 +71,7 @@ export default function Header() {
                duration={200}
                to={"register"}
             >
-               Contate nos
+               Cadastre-se
             </Link>
             <button
                className="header__burger"

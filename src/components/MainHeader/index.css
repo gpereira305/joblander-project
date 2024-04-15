@@ -138,18 +138,51 @@
 
 .header .header__item {
    cursor: pointer;
+   height: inherit;
 }
 
 .header .header__item>a {
+   display: flex;
+   align-items: center;
+   height: inherit;
    font: normal 600 16px/18px var(--primary-font);
    transition: all var(--transition-200ms);
+   position: relative;
+}
+
+@media (max-width: 768px) {
+
+   .header .header__item,
+   .header .header__item>a {
+      height: 40px;
+   }
+}
+
+
+
+@media (min-width: 768px) {
+   .header .header__item>a::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: var(--primary);
+      bottom: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity var(--transition-200ms);
+   }
+
 }
 
 .header .header__item:is(:hover, :focus),
-.header__item .active {
+.header .header__item:is(:hover, :focus) a::after,
+.header__item .active,
+.header__item a.active::after {
    color: var(--primary);
    font-weight: 700;
-
+   opacity: 1;
 }
 
 .header .header__item-button {

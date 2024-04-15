@@ -21,7 +21,7 @@ export default function PlanCard({ title, price, features }) {
             duration={200}
             to={"register"}
          >
-            Contate nos
+            Assinar
          </Link>
       </article>
    );

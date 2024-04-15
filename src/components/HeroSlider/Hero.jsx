@@ -37,7 +37,7 @@ export default function Hero() {
                         duration={200}
                         to={"register"}
                      >
-                        Contate nos
+                        Cadastre-se
                      </Link>
                   </div>
                   <figure className="hero__image">
