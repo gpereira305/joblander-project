@@ -30,13 +30,19 @@
 
 @media (max-width: 1200px) {
    .feature__list {
-      padding: 0 30px;
+      padding: 0 20px;
    }
 }
 
 @media (max-width: 992px) {
    .feature__list {
       flex-flow: column;
+   }
+}
+
+@media (max-width: 470px) {
+   .feature__list {
+      transform: translateY(-25px);
    }
 }
 

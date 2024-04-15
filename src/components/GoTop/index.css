@@ -1,0 +1,24 @@
+.scrolltop__button {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: fixed;
+   bottom: 100px;
+   right: 20px;
+   height: 45px;
+   width: 45px;
+   border-radius: 100%;
+   z-index: 1000;
+   cursor: pointer;
+   background-color: var(--primary);
+   font-size: 12px;
+   color: var(--neutral-light);
+   font-weight: 600;
+   font-family: var(--secondary-font);
+   transition: transform var(--transition-500ms);
+   transform: translateX(200px);
+}
+
+.scrolltop__button.active {
+   transform: translateX(0);
+}

@@ -20,7 +20,7 @@
 
 @media (max-width: 768px) {
    .comments .comments__title {
-      padding: 0 30px;
+      padding: 0 20px;
    }
 }
 
@@ -123,7 +123,7 @@
 
 @media (max-width: 470px) {
    .comments .swiper {
-      padding: 0 30px;
+      padding: 0 20px;
    }
 }
 

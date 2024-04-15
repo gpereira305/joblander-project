@@ -264,3 +264,59 @@ export const socialLinks = [
       id: 4,
    },
 ];
+
+export const plansData = [
+   {
+      title: "Grátis",
+      price: "R$0,00/mês",
+      id: 1,
+      features: [
+         "Chat ao vivo",
+         "Uso limitado dos recursos",
+         "Envio de 10 e-mails por mês",
+         "Disponivilidade de 50 vagas por mês",
+         "Sem acompanhamento de profissionais",
+      ],
+   },
+   {
+      title: "Plano Prata",
+      price: "R$45,00/mês",
+      id: 2,
+      features: [
+         "Chat ao vivo",
+         "Uso limitado dos recursos",
+         "Envio de 30 e-mails por mês",
+         "Disponivilidade de 80 vagas por mês",
+         "Sem acompanhamento de profissionais",
+      ],
+   },
+   {
+      title: "Plano Ouro",
+      price: "R$90,00/mês",
+      id: 3,
+      features: [
+         "Chat ao vivo",
+         "Uso ilimitado dos recursos",
+         "Envio de 50 e-mails por mês",
+         "Disponivilidade de 150 vagas por mês",
+         "Acompanhamento de profissionais",
+         "Suporte 24h",
+         "Análise de currículo",
+      ],
+   },
+   {
+      title: "Plano Diamante",
+      price: "R$150,00/mês",
+      id: 4,
+      features: [
+         "Chat ao vivo",
+         "Uso ilimitado dos recursos",
+         "Envio de 100 e-mails por mês",
+         "Disponivilidade de 200 vagas por mês",
+         "Acompanhamento de profissionais",
+         "Suporte 24h",
+         "Análise de currículo",
+         "Entrevista simulada",
+      ],
+   },
+];

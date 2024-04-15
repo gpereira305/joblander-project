@@ -6,6 +6,22 @@ const GlobalContext = createContext();
 export default function AppContext({ children }) {
    const [isToggle, setIsToggle] = useState(false);
    const [isActive, setIsActive] = useState(false);
+   const [showGoTopButton, setShowGoTopButton] = useState(false);
+
+   useEffect(() => {
+      const checkScrollHeight = () => {
+         if (!showGoTopButton && window.scrollY > 50) {
+            setShowGoTopButton(true);
+         } else if (showGoTopButton && window.scrollY <= 50) {
+            setShowGoTopButton(false);
+         }
+      };
+
+      window.addEventListener("scroll", checkScrollHeight);
+      return () => {
+         window.removeEventListener("scroll", checkScrollHeight);
+      };
+   }, [showGoTopButton]);
 
    useEffect(() => {
       window.addEventListener("scroll", () => {
@@ -20,6 +36,7 @@ export default function AppContext({ children }) {
       setIsActive,
       featureData,
       faqData,
+      showGoTopButton,
    };
 
    return (

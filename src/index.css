@@ -85,7 +85,7 @@ body {
 }
 
 #root {
-   min-height: 350vh;
+   min-height: 100vh;
    display: flex;
    flex-flow: column;
 }
@@ -94,7 +94,7 @@ main {
    position: relative;
    height: 100%;
    display: flow-root;
-   padding-top: 80px;
+   padding-top: 65px;
 }
 
 a:not([class]) {
