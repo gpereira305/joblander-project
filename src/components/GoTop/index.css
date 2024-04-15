@@ -17,6 +17,7 @@
    font-family: var(--secondary-font);
    transition: transform var(--transition-500ms);
    transform: translateX(200px);
+   user-select: none;
 }
 
 .scrolltop__button.active {
