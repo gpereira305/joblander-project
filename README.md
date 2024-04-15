@@ -17,14 +17,12 @@ Para solicitar um plano, basta preencher o formulário com seus dados básicos e
 
 ## **Tecnologias usadas**
 
-- <a href="https://pt-br.reactjs.org/">React</a>
-- <a href="https://reach.tech/router/">Reach Router</a>
-- <a href="https://www.npmjs.com/package/react-helmet">React Helmet</a>
-- <a href="https://axios-http.com/ptbr/docs/intro">Axios</a>
-- <a href="https://fontawesome.com/start">Fontawesome</a>
-- <a href="https://styled-components.com/">Styled-components</a>
-- <a href="https://swiperjs.com/">Swiper JS</a>
-- <a href="https://www.netlify.com/">Netlify</a>
+- <a href="https://pt-br.reactjs.org/">React</a> 
+- <a href="https://react.dev/learn/scaling-up-with-reducer-and-context">React Context API</a>   
+- <a href="https://swiperjs.com">Swiper JS</a> 
+- <a href="https://formik.org">Formik</a> 
+- <a href="https://www.npmjs.com/package/react-scroll">React Scroll</a> 
+- <a href="https://www.npmjs.com/package/react-toastify">React Tostify</a> 
 <hr>
  
 
@@ -48,21 +46,21 @@ Para solicitar um plano, basta preencher o formulário com seus dados básicos e
 - Desktop
   
  <img width="1366" alt="banner" src="https://github.com/gpereira305/joblander-project/assets/66249777/7370d7d7-955a-46be-8171-970416ac7f8f">
- 
+ <hr>
  <img width="1265" alt="comments" src="https://github.com/gpereira305/joblander-project/assets/66249777/42c2ce23-2f82-498f-b0e6-0052ef67c0b5">
-
+ <hr>
  <img width="1273" alt="FAQ" src="https://github.com/gpereira305/joblander-project/assets/66249777/2dbebf55-d6fd-451e-b169-26ddbb6f1e11">
-
+ <hr>
  <img width="1222" alt="plans" src="https://github.com/gpereira305/joblander-project/assets/66249777/68912efc-c899-467d-8349-b94b7c1a1b17">
-
+ <hr>
  <img width="1154" alt="form" src="https://github.com/gpereira305/joblander-project/assets/66249777/bb097ced-979f-4a8c-b0ad-f51d45d767b6">
-
+ <hr>
 
 
 - Versão mobile
 
 <img width="1216" alt="mobile-1" src="https://github.com/gpereira305/joblander-project/assets/66249777/14f8acf0-679e-45ef-a87d-7ac4e0ce25c9">
-
+<hr>
 <img width="1135" alt="mobile-2" src="https://github.com/gpereira305/joblander-project/assets/66249777/b98a5f0e-ebde-4e24-b3f5-550ce98a5756">
 
 
