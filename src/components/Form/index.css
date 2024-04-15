@@ -1,53 +1,102 @@
-.form {
+.signupform {
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   padding: 100px calc((100% - 1440px) / 2) 100px calc((100% - 1440px) / 2);
+   padding: 200px calc((100% - 1440px) / 2) 200px calc((100% - 1440px) / 2);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
 }
 
 @media (max-width: 1440px) {
-   .form {
+   .signupform {
       padding: 80px 20px;
    }
 }
 
-.form-control {
+.signupform__title {
+   text-align: center;
+   max-width: 576px;
+   margin: auto;
+   margin-bottom: 50px;
+}
+
+.signupform__body {
+   width: 100%;
+   max-width: 768px;
+   border-radius: var(--radius10);
+   box-shadow: var(--box-shadow-100);
+   padding: 30px;
+   background-color: var(--neutral-light);
+}
+
+.signupform__wrapper {
    margin-bottom: 20px;
    display: flex;
    gap: 30px;
 }
 
+@media (max-width: 768px) {
+   .signupform__wrapper {
+      gap: 15px;
+   }
+}
 
-label {
+@media (max-width: 576px) {
+   .signupform__wrapper {
+      flex-flow: column;
+   }
+}
+
+
+.signupform__label {
    font-weight: bold;
    display: flex;
-   margin-bottom: 5px;
    flex-flow: column;
    width: 100%;
+   font: normal 400 16px/18px var(--primary-font);
+   color: var(--secondary);
 }
 
-input[type='text'],
-input[type='email'],
-select,
-textarea {
+.signupform .signupform__input {
    display: block;
-   width: 400px;
-   padding: 6px 12px;
-   font-size: 14px;
-   line-height: 1.42857143;
-   color: #555;
-   background-color: #fff;
-   background-image: none;
-   border: 1px solid #ccc;
-   border-radius: 4px;
-   /* margin-bottom: 20px; */
+   font: normal 400 14px/16px var(--primary-font);
+   height: 40px;
+   margin: 5px 0 2px 0;
+   padding: 0 20px;
+   border-radius: var(--radius40);
+   border: 1px solid var(--light-dark-300);
+}
+
+.signupform__input:focus {
+   outline: none;
+   border: 1px solid var(--light-dark-200);
+}
+
+.signupform__error {
+   display: block;
+   font: normal 400 12px/14px var(--primary-font);
+   color: var(--primary);
+}
+
+.signupform__submit {
+   width: 100% !important;
+   max-width: 338px;
+   justify-content: center;
+}
+
+@media (max-width: 576px) {
+   .signupform__submit {
+      max-width: 100%;
+   }
 }
 
 
-.error {
-   color: red;
-}
+
+
+
+
 
 /*
 .error {

@@ -1,3 +1,26 @@
+export const navLinks = [
+   {
+      id: 1,
+      title: "Parceiros",
+      url: "partners",
+   },
+   {
+      id: 2,
+      title: "Depoimentos",
+      url: "comments",
+   },
+   {
+      id: 3,
+      title: "Planos",
+      url: "plans",
+   },
+   {
+      id: 4,
+      title: "Inscrições",
+      url: "register",
+   },
+];
+
 import banner1 from "./assets/images/banner-1.jpg";
 import banner2 from "./assets/images/banner-2.jpg";
 import banner3 from "./assets/images/banner-3.jpg";
@@ -320,89 +343,3 @@ export const plansData = [
       ],
    },
 ];
-
-export const formData = [
-   {
-      labelName: "Nome",
-      id: 1,
-      content: {
-         type: "text",
-         name: "name",
-         placeholder: "Insira seu nome",
-         id: 1,
-      },
-   },
-   {
-      labelName: "Email",
-      id: 3,
-      content: {
-         type: "email",
-         name: "email",
-         placeholder: "Insira seu email",
-         id: 3,
-      },
-   },
-   {
-      labelName: "Telefone",
-      id: 2,
-      content: {
-         type: "text",
-         name: "phone",
-         placeholder: "(00) 00000 0000",
-         id: 2,
-      },
-   },
-   {
-      labelName: "Idade",
-      id: 4,
-      content: {
-         type: "text",
-         name: "age",
-         placeholder: "Insira sua idade",
-         id: 4,
-      },
-   },
-   {
-      labelName: "Estado",
-      id: 5,
-      content: {
-         type: "text",
-         name: "state",
-         placeholder: "Insira seu estado",
-         id: 5,
-      },
-   },
-   {
-      labelName: "Cidade",
-      id: 6,
-      content: {
-         type: "text",
-         name: "city",
-         placeholder: "Insira sua cidade",
-         id: 6,
-      },
-   },
-   {
-      labelName: "Vaga pretendida",
-      id: 7,
-      content: {
-         type: "text",
-         name: "role",
-         placeholder: "Insira a vaga de enteresse",
-         id: 7,
-      },
-   },
-];
-// <label htmlFor="name">
-//    Nome
-//    <Field
-//       type="text"
-//       id="name"
-//       name="name"
-//       onChange={handleChange}
-//       onBlur={handleBlur}
-//    />
-//    <ErrorMessage name="name">
-//       {(error) => <div className="error">{error}</div>}
-//    </ErrorMessage>
-// </label>;

@@ -1,11 +1,10 @@
 .info {
-   margin: 100px 0;
-   padding: 0 calc((100% - 992px) / 2) 0 calc((100% - 992px) / 2);
+   padding: 200px calc((100% - 992px) / 2) 200px calc((100% - 992px) / 2);
 }
 
 @media (max-width: 992px) {
    .info {
-      padding: 0 20px;
+      padding: 100px 20px;
    }
 }
 

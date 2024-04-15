@@ -4,7 +4,7 @@ import "./index.css";
 
 export default function Partners() {
    return (
-      <section className="partners">
+      <section className="partners" id="partners">
          <h2 className="partners__title main-title">
             Empresas que trabalham conosco
          </h2>

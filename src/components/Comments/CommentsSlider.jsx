@@ -29,6 +29,7 @@ export default function CommentsSlider() {
    return (
       <section
          className="comments"
+         id="comments"
          style={{ backgroundImage: `url(${commentsBg})` }}
       >
          <h2 className="comments__title main-title">

@@ -18,10 +18,10 @@ export default function Hero() {
             navigation={true}
             modules={[Autoplay, Pagination, Navigation, Parallax]}
             pagination={{ clickable: true }}
-            // autoplay={{
-            //    delay: 4000,
-            //    disableOnInteraction: false,
-            // }}
+            autoplay={{
+               delay: 4000,
+               disableOnInteraction: false,
+            }}
          >
             {sliderData?.map(({ title, message, banner, id }) => (
                <SwiperSlide key={id}>

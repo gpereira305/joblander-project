@@ -1,20 +1,15 @@
 import React from "react";
-import "./index.css";
-import {
-   Formik,
-   Form,
-   Field,
-   ErrorMessage,
-   FieldArray,
-   FastField,
-} from "formik";
+import { Formik, Form, Field, ErrorMessage } from "formik";
 import { initialValues, validationSchema } from "../../schema";
+import formBg from "../../assets/images/background-1.webp";
+import { toast } from "react-toastify";
+import "./index.css";
 
-const onSubmit = (values, submitProps) => {
-   console.log("Form data", values);
-   submitProps.setSubmitting(false);
-   submitProps.resetForm();
+const onSubmit = (values) => {
+   alert(JSON.stringify(values, null, 2));
+   toast.success("Dados enviados com sucesso!");
 };
+
 export default function App() {
    const planOptions = [
       { key: "Selecione um plano", value: "" },
@@ -27,94 +22,202 @@ export default function App() {
       <Formik
          initialValues={initialValues}
          validationSchema={validationSchema}
-         onSubmit={onSubmit}
+         onSubmit={async (values, { resetForm }) => {
+            await onSubmit(values);
+            resetForm();
+         }}
       >
-         {(formik) => {
+         {({ isValid, isSubmitting }) => {
             return (
-               <div className="form">
-                  <Form>
-                     <div className="form-control">
-                        <label htmlFor="firstName">
+               <section
+                  className="signupform"
+                  id="register"
+                  style={{ backgroundImage: `url(${formBg})` }}
+               >
+                  <h2 className="signupform__title main-title">
+                     Crie sua conta
+                  </h2>
+
+                  <Form className="signupform__body">
+                     <div className="signupform__wrapper">
+                        <label
+                           className="signupform__label"
+                           htmlFor="firstName"
+                        >
                            Nome
-                           <Field type="text" id="firstName" name="firstName" />
+                           <Field
+                              className="signupform__input"
+                              type="text"
+                              id="firstName"
+                              name="firstName"
+                              placeholder="Ex: João"
+                           />
                            <ErrorMessage name="firstName">
-                              {(error) => <div className="error">{error}</div>}
+                              {(error) => (
+                                 <span className="signupform__error">
+                                    {error}
+                                 </span>
+                              )}
                            </ErrorMessage>
                         </label>
 
-                        <label htmlFor="lastName">
+                        <label className="signupform__label" htmlFor="lastName">
                            Sobrenome
-                           <Field type="text" id="lastName" name="lastName" />
+                           <Field
+                              className="signupform__input"
+                              type="text"
+                              id="lastName"
+                              name="lastName"
+                              placeholder="Ex: Souza"
+                           />
                            <ErrorMessage name="lastName">
-                              {(error) => <div className="error">{error}</div>}
+                              {(error) => (
+                                 <span className="signupform__error">
+                                    {error}
+                                 </span>
+                              )}
                            </ErrorMessage>
                         </label>
                      </div>
 
-                     <div className="form-control">
-                        <label htmlFor="email">
+                     <div className="signupform__wrapper">
+                        <label className="signupform__label" htmlFor="email">
                            Email
-                           <Field type="email" id="email" name="email" />
+                           <Field
+                              className="signupform__input"
+                              type="email"
+                              id="email"
+                              name="email"
+                              placeholder="Ex: joaosouza@gmail.com"
+                           />
                            <ErrorMessage name="email">
-                              {(error) => <div className="error">{error}</div>}
+                              {(error) => (
+                                 <span className="signupform__error">
+                                    {error}
+                                 </span>
+                              )}
                            </ErrorMessage>
                         </label>
 
-                        <label htmlFor="phone">
+                        <label className="signupform__label" htmlFor="phone">
                            Telefone
-                           <Field type="text" id="phone" name="phone" />
+                           <Field
+                              className="signupform__input"
+                              type="text"
+                              id="phone"
+                              name="phone"
+                              placeholder="Ex: (99)99999-9999"
+                           />
                            <ErrorMessage name="phone">
-                              {(error) => <div className="error">{error}</div>}
+                              {(error) => (
+                                 <span className="signupform__error">
+                                    {error}
+                                 </span>
+                              )}
                            </ErrorMessage>
                         </label>
                      </div>
 
-                     <div className="form-control">
-                        <label htmlFor="state">
+                     <div className="signupform__wrapper">
+                        <label className="signupform__label" htmlFor="state">
                            Estado
-                           <Field type="text" id="state" name="state" />
+                           <Field
+                              className="signupform__input"
+                              type="text"
+                              id="state"
+                              name="state"
+                              placeholder="Ex:  SP ou São Paulo"
+                           />
                            <ErrorMessage name="state">
-                              {(error) => <div className="error">{error}</div>}
+                              {(error) => (
+                                 <span className="signupform__error">
+                                    {error}
+                                 </span>
+                              )}
                            </ErrorMessage>
                         </label>
-                        <label htmlFor="city">
+                        <label className="signupform__label" htmlFor="city">
                            Cidade
-                           <Field type="text" id="city" name="city" />
+                           <Field
+                              className="signupform__input"
+                              type="text"
+                              id="city"
+                              name="city"
+                              placeholder="Ex: são Paulo"
+                           />
                            <ErrorMessage name="city">
-                              {(error) => <div className="error">{error}</div>}
+                              {(error) => (
+                                 <span className="signupform__error">
+                                    {error}
+                                 </span>
+                              )}
                            </ErrorMessage>
                         </label>
                      </div>
 
-                     <div className="form-control">
-                        <label htmlFor="age">
+                     <div className="signupform__wrapper">
+                        <label className="signupform__label" htmlFor="age">
                            Idade
-                           <Field type="text" id="age" name="age" />
+                           <Field
+                              className="signupform__input"
+                              type="text"
+                              id="age"
+                              name="age"
+                              placeholder="Ex: 23"
+                           />
                            <ErrorMessage name="age">
-                              {(error) => <div className="error">{error}</div>}
+                              {(error) => (
+                                 <span className="signupform__error">
+                                    {error}
+                                 </span>
+                              )}
                            </ErrorMessage>
                         </label>
-                        <label htmlFor="role">
+                        <label className="signupform__label" htmlFor="role">
                            Cargo desejado
-                           <Field type="text" id="role" name="role" />
+                           <Field
+                              className="signupform__input"
+                              type="text"
+                              id="role"
+                              name="role"
+                              placeholder="Ex:  Desenvolvedor web"
+                           />
                            <ErrorMessage name="role">
-                              {(error) => <div className="error">{error}</div>}
+                              {(error) => (
+                                 <span className="signupform__error">
+                                    {error}
+                                 </span>
+                              )}
                            </ErrorMessage>
                         </label>
                      </div>
 
-                     <div className="form-control">
-                        <label htmlFor="salary">
+                     <div className="signupform__wrapper">
+                        <label className="signupform__label" htmlFor="salary">
                            Pretensão salarial
-                           <Field type="text" id="salary" name="salary" />
+                           <Field
+                              className="signupform__input"
+                              type="text"
+                              id="salary"
+                              name="salary"
+                              placeholder="Ex: 5000"
+                           />
                            <ErrorMessage name="salary">
-                              {(error) => <div className="error">{error}</div>}
+                              {(error) => (
+                                 <span className="signupform__error">
+                                    {error}
+                                 </span>
+                              )}
                            </ErrorMessage>
                         </label>
 
-                        <label htmlFor="plan">
+                        <label className="signupform__label" htmlFor="plan">
                            Plano
-                           <Field name="plan" as="select">
+                           <Field
+                              className="signupform__input"
+                              name="plan"
+                              as="select"
+                           >
                               {planOptions.map(({ key, value }) => (
                                  <option key={key} value={value}>
                                     {key}
@@ -122,18 +225,23 @@ export default function App() {
                               ))}
                            </Field>
                            <ErrorMessage name="plan">
-                              {(error) => <div className="error">{error}</div>}
+                              {(error) => (
+                                 <span className="signupform__error">
+                                    {error}
+                                 </span>
+                              )}
                            </ErrorMessage>
                         </label>
                      </div>
                      <button
+                        className="signupform__submit button__layout"
                         type="submit"
-                        disabled={!formik.isValid || formik.isSubmitting}
+                        disabled={!isValid || isSubmitting}
                      >
-                        Submit
+                        Enviar
                      </button>
                   </Form>
-               </div>
+               </section>
             );
          }}
       </Formik>

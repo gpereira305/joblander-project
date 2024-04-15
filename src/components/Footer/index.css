@@ -36,14 +36,18 @@
    }
 }
 
-.footer .footer__image {
+.footer .footer__logo-element {
    margin-bottom: 30px;
+   min-width: 138px;
+   font: normal 500 24px/26px var(--primary-font);
+   color: var(--primary);
 }
 
-.footer .footer__img {
-   width: 130px;
-   object-fit: contain;
-   height: 30px;
+@media (max-width: 470px) {
+   .footer .footer__logo-element {
+      font-size: 20px;
+      line-height: normal;
+   }
 }
 
 .footer .footer__socials {

@@ -9,6 +9,7 @@ import CommentsSlider from "./components/Comments/CommentsSlider";
 import Plans from "./components/Plans/Plans";
 import SignUp from "./components/Form/SignUp";
 import GoTop from "./components/GoTop/GoTop";
+import { ToastContainer } from "react-toastify";
 
 function App() {
    return (
@@ -23,6 +24,7 @@ function App() {
             <Plans />
             <SignUp />
             <GoTop />
+            <ToastContainer autoClose={1500} />
          </main>
 
          <Footer />

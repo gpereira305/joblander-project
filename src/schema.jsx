@@ -41,6 +41,7 @@ const validationSchema = Yup.object({
 
    age: Yup.string()
       .min(2, "Idade mínima de pelo menos 2 dígitos!")
+      .max(2, "Máximo de 3 dígitos!")
       .matches(
          /(?=.*?\d)^\$?(([1-9]\d{0,2}(,\d{3})*)|\d+)?(\.\d{1,2})?$/,
          `Idade ${invalidMessage}`,

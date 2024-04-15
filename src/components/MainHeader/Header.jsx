@@ -1,35 +1,19 @@
 import React from "react";
-import Logo from "../../assets/icons/main-logo.svg";
 import Close from "../../assets/icons/close.svg";
+import { navLinks } from "../../data";
+import { Link } from "react-scroll";
 import { useGlobalContext } from "../../context";
 import "./index.css";
-
-const navLinks = [
-   {
-      id: 1,
-      title: "Home-1",
-   },
-   {
-      id: 2,
-      title: "Home-2",
-   },
-   {
-      id: 3,
-      title: "Home-3",
-   },
-   {
-      id: 4,
-      title: "Home-4",
-   },
-];
 
 export default function Header() {
    const { isActive, setIsActive, isToggle } = useGlobalContext();
 
    const handleClick = () => {
-      document.body.style.overflowY =
-         document.body.style.overflowY == "hidden" ? "auto" : "hidden";
-      setIsActive(!isActive);
+      if (window.innerWidth < 768) {
+         document.body.style.overflowY =
+            document.body.style.overflowY == "hidden" ? "auto" : "hidden";
+         setIsActive(!isActive);
+      }
    };
 
    const toggleHeader = isToggle ? "header toggle" : "header";
@@ -41,9 +25,7 @@ export default function Header() {
    return (
       <header className={toggleHeader}>
          <div className="header__container">
-            <figure className="header__logo">
-               <img className="header__img" src={Logo} alt="JobLander" />
-            </figure>
+            <p className="header__logo">JobLander</p>
 
             <nav className={toggleNavbar}>
                <img
@@ -55,27 +37,42 @@ export default function Header() {
                />
 
                <ul className="header__listing">
-                  {navLinks?.map(({ id, title }) => (
-                     <li
-                        className="header__item"
-                        key={id}
-                        onClick={handleClick}
-                     >
-                        <a className="header__link" href="#">
-                           {title}
-                        </a>
+                  {navLinks?.map(({ id, title, url }) => (
+                     <li className="header__item" key={id}>
+                        <Link
+                           activeClass="header__link active"
+                           smooth={true}
+                           spy={true}
+                           duration={200}
+                           to={url}
+                        >
+                           <span onClick={handleClick}>{title}</span>
+                        </Link>
                      </li>
-                  ))}{" "}
-                  <li className="header__item-button button__layout">
+                  ))}
+                  <Link
+                     className="header__item-button button__layout"
+                     smooth={true}
+                     spy={true}
+                     duration={200}
+                     to={"register"}
+                     onClick={handleClick}
+                  >
                      Contate nos
-                  </li>
+                  </Link>
                </ul>
             </nav>
             <span className={toggleOverlay} onClick={handleClick}></span>
 
-            <button className="header__button button__layout" type="button">
+            <Link
+               className="header__button button__layout"
+               smooth={true}
+               spy={true}
+               duration={200}
+               to={"register"}
+            >
                Contate nos
-            </button>
+            </Link>
             <button
                className="header__burger"
                type="button"

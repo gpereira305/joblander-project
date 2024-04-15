@@ -1,5 +1,5 @@
 .comments {
-   padding: 100px calc((100% - 1200px) / 2) 100px calc((100% - 1200px) / 2);
+   padding: 200px calc((100% - 1200px) / 2) 200px calc((100% - 1200px) / 2);
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
@@ -8,6 +8,7 @@
 @media (max-width: 992px) {
    .comments {
       overflow: hidden;
+      padding: 100px 20px;
    }
 }
 

@@ -12,9 +12,7 @@ export default function Footer() {
       >
          <div className="footer__wrapper">
             <div className="footer__logo">
-               <figure className="footer__image">
-                  <img className="footer__img" src={footerLogo} alt="Logo" />
-               </figure>
+               <p className="footer__logo-element">JobLander</p>
 
                <ul className="footer__socials">
                   {socialLinks.map(({ icon, link, name }) => (

@@ -1,8 +1,5 @@
 .plans {
-   padding: 100px calc((100% - 1440px) / 2) 100px calc((100% - 1440px) / 2);
-   background-repeat: no-repeat;
-   background-size: cover;
-   background-position: center;
+   padding: 300px calc((100% - 1440px) / 2) 300px calc((100% - 1440px) / 2);
 }
 
 @media (max-width: 1440px) {
