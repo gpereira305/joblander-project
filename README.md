@@ -38,7 +38,7 @@ Para solicitar um plano, basta preencher o formulário com seus dados básicos e
 <hr>
 
 ## **Esta aplicação está hospedada no Github Pages **
-- Visite aplicação online aqui: https://staytuned.netlify.app
+- Visite aplicação online aqui:  https://gpereira305.github.io/joblander-project
 
 <hr>
 
